@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Survey</string>
+    <string name="title_section1">New Surveys</string>
+    <string name="title_section2">Previously Filled Surveys</string>
+    <string name="title_section3">Saved Surveys</string>
+    <string name="title_section4">Help</string>
+    <string name="title_section5">Exit</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+</resources>
