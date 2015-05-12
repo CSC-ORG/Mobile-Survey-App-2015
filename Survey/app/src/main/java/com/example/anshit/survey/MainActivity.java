@@ -39,6 +39,7 @@ public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks, OnClickListener {
 
     String sno,stitle,surveynos;
+    public static boolean noconnection;
     // url to get all products list
     private static String url_survey_list;
 
@@ -358,9 +359,12 @@ public class MainActivity extends ActionBarActivity
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             // getting JSON string from URL
             params.add(new BasicNameValuePair("emailid", Login.emailid));
-
+            noconnection=false;
             JSONObject json = jParser.makeHttpRequest(url_survey_list, "GET", params);
 
+            if(noconnection){
+                return null;
+            }
             // Check your log cat for JSON reponse
             //Log.d("All Products: ", json.toString());
 
@@ -408,7 +412,27 @@ public class MainActivity extends ActionBarActivity
                 // updating UI from Background Thread
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        if(errorFlag){
+                        if(noconnection)
+                        {
+                            AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                            alertDialog.setTitle("Alert");
+                            alertDialog.setMessage("No internet connection.");
+                            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+                            alertDialog.show();
+                            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                            layoutParams.setMargins(0, 30, 0, 0);
+                            TextView textView = new TextView(MainActivity.this);
+                            textView.setLayoutParams(layoutParams);
+                            textView.setTextSize(20);
+                            textView.setTextColor(Color.parseColor("#333333"));
+                            textView.setGravity(Gravity.CENTER);
+                            textView.setText("No Survey Found");
+                            linearLayout.addView(textView);
+                        }
+                        else if(errorFlag){
                             AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
                             alertDialog.setTitle("Alert");
                             alertDialog.setMessage("Could not load surveys.\n" + error);
