@@ -317,9 +317,11 @@ public class DisplayNewSurvey extends ActionBarActivity implements OnClickListen
                     if(errorFlag){
                         AlertDialog alertDialog = new AlertDialog.Builder(DisplayNewSurvey.this).create();
                         alertDialog.setTitle("Alert");
-                        alertDialog.setMessage("Could not load survey.\n"+error);
+                        alertDialog.setMessage("Could not load survey.");
                         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int which){}
+                            public void onClick(DialogInterface dialog,int which){
+                                finish();
+                            }
                         });
                         alertDialog.show();
                     }
@@ -798,9 +800,11 @@ public class DisplayNewSurvey extends ActionBarActivity implements OnClickListen
                     if(errorFlag){
                         AlertDialog alertDialog = new AlertDialog.Builder(DisplayNewSurvey.this).create();
                         alertDialog.setTitle("Alert");
-                        alertDialog.setMessage("Could not submit response.\n"+error);
+                        alertDialog.setMessage("Could not submit response.");
                         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int which){}
+                            public void onClick(DialogInterface dialog,int which){
+                                finish();
+                            }
                         });
                         alertDialog.show();
                     }

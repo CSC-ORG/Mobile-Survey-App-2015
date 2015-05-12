@@ -165,10 +165,11 @@ public class DisplayFilledSurvey extends ActionBarActivity{
                 public void run() {
                     if(errorFlag){
                         AlertDialog alertDialog = new AlertDialog.Builder(DisplayFilledSurvey.this).create();
-                        alertDialog.setTitle("Sign Up Failed");
-                        alertDialog.setMessage(error);//"Already registered with this email address.");
+                        alertDialog.setTitle("Alert");
+                        alertDialog.setMessage("Could not load survey.");
                         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
+                                finish();
                             }
                         });
                         alertDialog.show();

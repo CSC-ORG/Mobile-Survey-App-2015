@@ -65,10 +65,13 @@ public class JSONParser {
             }
 
         } catch (UnsupportedEncodingException e) {
+            MainActivity.noconnection=true;
             e.printStackTrace();
         } catch (ClientProtocolException e) {
+            MainActivity.noconnection=true;
             e.printStackTrace();
         } catch (IOException e) {
+            MainActivity.noconnection=true;
             e.printStackTrace();
         }
 
