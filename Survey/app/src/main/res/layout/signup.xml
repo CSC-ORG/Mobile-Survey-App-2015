@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/signupactvityid"
+    android:background="#fafafa">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/signupidtext"
+        android:hint="Email Address"
+        android:layout_above="@+id/signuppasswordtext"
+        android:layout_marginBottom="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/signuppasswordtext"
+        android:hint="Password"
+        android:layout_above="@+id/nametext"
+        android:layout_marginBottom="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/nametext"
+        android:hint="Name"
+        android:layout_above="@+id/agetext"
+        android:layout_marginBottom="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/agetext"
+        android:hint="Age"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/gendertext"
+        android:hint="Gender:M/F"
+        android:layout_below="@+id/agetext"
+        android:layout_marginTop="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/citytext"
+        android:hint="City"
+        android:layout_below="@+id/gendertext"
+        android:layout_marginTop="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <Button
+        android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#fafafa"
+        android:id="@+id/signupbutton2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
+        android:layout_below="@id/citytext"
+        android:background="@drawable/button_background"/>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/loginactivityid"
+    android:background="#fafafa">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/loginidtext"
+        android:hint="Email Address"
+        android:layout_above="@+id/loginpasswordtext"
+        android:layout_marginBottom="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/loginpasswordtext"
+        android:hint="Password"
+        android:layout_above="@+id/loginbutton"
+        android:layout_marginBottom="@dimen/abc_action_bar_subtitle_bottom_margin_material"/>
+
+    <Button
+        android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#fafafa"
+        android:id="@+id/loginbutton"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_background"/>
+
+    <Button
+        android:layout_width="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#fafafa"
+        android:id="@+id/signupbutton1"
+        android:layout_below="@id/loginbutton"
+        android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_background"/>
+
+
+</RelativeLayout>
