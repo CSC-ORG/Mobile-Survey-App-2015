@@ -1,0 +1,45 @@
+.login-box{
+	background-image: url('http://localhost/extra/bg@.jpg');
+	position:fixed;
+	top:0;
+	bottom:0;
+	background-size: cover;
+	background-position: 50% 50%;
+	width:100%;
+}
+.top-heading a{
+	
+	text-decoration: none;
+	color:white;
+	margin-left:39%;
+	margin-top:31%;
+	font-size: 68px;
+}
+.top-heading{
+	margin-top:7%;
+}
+.form-login{
+	padding: 11px 10px 11px 13px;
+display: block;
+margin: 0;
+border: 1px solid white;
+font: 16px/1.4 "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+}
+.login-box1{
+	background-image: url('http://localhost/extra/partner@.jpg');
+	position:fixed;
+	top:0;
+	bottom:0;
+	background-size: cover;
+	background-position: 50% 50%;
+	width:100%;
+}
+.successful{
+	background-image: url('http://localhost/extra/successful@.gif');
+	position:fixed;
+	top:0;
+	bottom:0;
+	background-size: cover;
+	background-position: 50% 50%;
+	width:100%;
+}
