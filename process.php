@@ -9,27 +9,7 @@
 <?php
 include_once 'db.php';
 include_once 'common.php';
-//header('Content-Type: image/jpeg');
-//USE cscsurveys;
-//include("db.php");
-//include("test.php")
-//$len1=sizeof("qtitle");
-//$len2=sizeof("htitle");
-/*for($i=0;$i<$len1;$i++){
-	echo $_POST[qtitle[$i]]."\n";
-}*/
-//echo 'Question title&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'.'Help text&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'."Question type&nbsp&nbsp&nbsp&nbsp"."Text question&nbsp&nbsp&nbsp&nbsp"."Options&nbsp&nbsp&nbsp&nbsp"."Image&nbsp&nbsp&nbsp&nbsp"."<br/>";
 dbConnect("survey");
-
-/*$result=mysql_query("SELECT * FROM questions WHERE surveyno=9");
-while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-    $filename = rand(1, 100).'.txt';
-    file_put_contents('./'.$filename, $row['image']);
-    $image=$row['image'];
-    
-}
-header("content-type:image/jpeg");
-echo $image;*/
 if(isset($_POST['submit'])){
 	$emailid='email';
 	$sql="SELECT emailid
