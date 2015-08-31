@@ -325,9 +325,6 @@ lastrow.appendChild(input);
 		var ch="main"+i;
 		console.log("value of ch is "+ch);
 		var democlass=document.getElementById(ch).getElementsByClassName("glyphicon-remove");
-		if(i==1)
-			console.log("fuckingretards"+democlass.length);
-		//var democlass1=document.getElementById(ch).getElementsByClassName("imageclose")[0].setAttribute('count-value',i);
 		var thumbclass=document.getElementById(ch).getElementsByClassName("glyphicon-picture");
 		var thumbinput=document.getElementById(main).getElementsByClassName("thumbsrc");
 		var thumbimages=document.getElementById(ch).getElementsByClassName("thumbimage");
@@ -338,11 +335,6 @@ lastrow.appendChild(input);
 		for(j=0;j<democlass.length;j++){
 			//if(j!=0)
 		democlass[j].setAttribute('count-value',i);
-		//democlass1[j].setAttribute('count-value',i);
-		//thumbclass[j].setAttribute('thumb-value',j);
-		//thumbinput[j].setAttribute('thumbinput',j);
-		//thumbclass[j].setAttribute('thumb-valu',i);
-		//thumbimages[j].setAttribute('thumb-images',j);
 	  }
 	  for(j=0;j<thumbclass.length;j++){
 	  	thumbclass[j].setAttribute('thumb-valu',i);
@@ -384,12 +376,7 @@ var modern='-1';
 function readURL(input,datavalue) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-            //var path=input.value;
-            
-            //console.log(path.split("\\")[path.split("\\").length-1]);
             var main='main'+input.getAttribute('image-value');
-            //console.log("plaese don't help me "+datavalue);
-            //console.log("value of main in readurl is "+main);
             reader.onload = function (e) {
                 $('#'+main+' #blah')
                     .attr('src', e.target.result)
@@ -447,11 +434,6 @@ function readURL(input,datavalue) {
 			el.parentNode.removeChild( el );
  			var length=el.length;
  		}
-		//if(length>=1){
-		//(item.parentNode.parentNode).remove();
-		//console.log("entered to remove this main");
-		//document.getElementById(checker).getElementsByClassName("hiddenvalue3")[0].value-="1";
-		//}
 	}
 </script>
 </head>
