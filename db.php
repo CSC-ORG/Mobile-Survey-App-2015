@@ -13,7 +13,6 @@ function dbConnect($db='')
 
 	if ($db!='' and !@mysql_select_db($db))
 		die('The site database is unavailable.');
-    //echo "alert('success');";
 	return $dbcnx;
 }
 ?>
