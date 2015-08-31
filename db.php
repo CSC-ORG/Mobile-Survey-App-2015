@@ -1,8 +1,8 @@
 <?php // db.php
 
 $dbhost = 'localhost';
-$dbuser = 'alok';
-$dbpass = 'zeal';
+$dbuser = 'your_username';
+$dbpass = 'your_password';
 
 function dbConnect($db='')
 {
