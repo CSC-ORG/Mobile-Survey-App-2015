@@ -60,47 +60,7 @@ for(i = 0; i < inputs.length; i++) {
     if(inputs[i].type == "checkbox") {
         inputs[i].type = "radio"; 
     }
-    //document.getElementById(main).getElementsByClassName("hiddenvalue3")[0].value=inputs.length;  
 }
-/*var removedclasses1=document.getElementsByClassName("multichoice");
-var removedclasses2=document.getElementsByClassName("checkchoice");
-var displaystate=document.getElementById("textchoice").style.display;
-if(displaystate=="initial") {
-	document.getElementById("textchoice").style.display="none";
-	return;
-}
-var l1=removedclasses1.length;
-var l2=removedclasses2.length;
-console.log("value of l1 "+l1);
-console.log("value of l2 "+l2);
-
-if(l1>1) {
-	removedclasses1[0].style.display="none";
-	console.log(document.getElementById('helpyou').childNodes[2]);
-	for(i=1;i<l1;i++)
-		removedclasses1[i].parentNode.removeChild(removedclasses1[i]);
-		//document.getElementById('helpyou').removeChild(removedclasses1[i]);
-		//console.log('parent node of'+i+'is '+removedclasses1[i].parentElement.id);
-		//if(removedclasses1[i].style.display==='initial')
-	//	console.log(removedclasses1[i]);
-		//removedclasses1[i].parentNode.;
-		//document.getElementById('helpyou').removeChild(removedclasses1[i]);
-		return;
-}
-if(l2>1) {
-	console.log('no of classes of type checkchoice are'+l2);
-	removedclasses2[0].style.display="none";
-	for(i=1;i<l2-1;i++)
-		//if(removedclasses2[i].style.display==='initial')
-	{
-		console.log('atleat entered'+i);
-		console.log(removedclasses2[i]);
-		removedclasses2[i].remove();
-		console.log('leaved'+i);
-	}
-	return;
-	removedclasses2[l2-1].remove();
-}*/
 }
 function removeall3(item) {
 var main='main'+item.getAttribute('data-value');
@@ -111,12 +71,9 @@ for(i = 0; i < inputs.length; i++) {
         inputs[i].type = "checkbox"; 
     }  
 }
-//document.getElementById(main).getElementsByClassName("hiddenvalue3")[0].value=inputs.length;
 }
 function demo1(item,k){
-	//document.querySelectorAll("input[type=submit]")[0].style.marginLeft="-32%";
-	//document.querySelectorAll("input[type=submit]")[0].style.marginTop="10%";
-	if(k==0){
+  if(k==0){
 	var main='main'+item.getAttribute('data-value');
 	document.getElementById(main).getElementsByClassName("otherchoice")[0].style.display="none";
 	var hiddenclasses1=document.getElementsByClassName("hiddenvalue1");
@@ -132,11 +89,6 @@ function demo1(item,k){
 		//removedclasses1[(l1-1)/2].style.display="none";
 	console.log("value of multichoice over here "+l1);
 	removedclasses1[0].style.display="none";
-	//console.log(document.getElementById('helpyou').childNodes[2]);
-	//console.log("entering jquery");
-	//console.log($("#"+main+".multichoice").eq(1));
-	//$("#"+main+" .multichoice").eq(1).remove();
-	//console.log("leaving jquery and value of l1 is "+l1);
 	if(l1==2||l1==3){
     if(l1==2)
     removedclasses1[l1-1].style.display="none";
