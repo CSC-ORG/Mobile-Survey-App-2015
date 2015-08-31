@@ -50,17 +50,10 @@ $count=0;
           $optionsingle[$count][]="";
           $count++;
 		}
-     //echo $row1['type']." ".$row1['option']."<br>";
 	}
 	$total=$count;
 	//echo "<br>";
 }
-//print_r($optionmulti);
-//print_r($optionsingle);
-//echo json_encode($optionmulti);
-//for($i=0;$i<$total;$i++) {
-
-//}
 ?>
 <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -71,8 +64,6 @@ $( document ).ready(function() {
 var array1 = <?php echo json_encode($optionmulti) ?>;
 var array2 = <?php echo json_encode($optionsingle) ?>;
 for(var i=0;i<array2.length;i++) {
-    //div[i]=document.createElement("div");
-    
     var div = document.createElement("div");
     div.style.height = "400px";
     div.className="container";
@@ -92,10 +83,7 @@ for(var i=0;i<array2.length;i++)
 	{
         counter=1;
         classteller=i;
-        console.log("entered");
-	 //alert(array2[i][j]+" hell yeah");
-	 //store[p1]=array2[i][j];
-	 place=-1;
+   	 place=-1;
 	 for(var k=0;k<store.length;k++){
 	 	if(store[k]==array2[i][j]) {
 	 		place=k;
@@ -104,7 +92,6 @@ for(var i=0;i<array2.length;i++)
 	 if(place==-1){
 	 	store[store.length]=array2[i][j];
 	 	place=store.length-1;
-	 	//store.length+=1;
 	 	frequency[place]=1;
 	 }
 	 else{
